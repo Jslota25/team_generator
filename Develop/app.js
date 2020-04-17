@@ -10,6 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const team = [];
+
 
 function getInfo() {
     inquirer
@@ -41,3 +43,18 @@ function getInfo() {
         }
     ])
 }
+
+const createTeam = () => {
+    inquirer
+    .prompt ([
+        {
+            type: "list",
+            name: "team",
+            choices: [
+                "Build Team",
+                "Finish Team"
+            ]
+        }
+    ])
+
+    
