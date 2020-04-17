@@ -79,7 +79,9 @@ const createTeam = () => {
                     }
                 
             }) 
+
     break;
+
 case "Finish Team":
         console.log(team);
         if (team.length > 0) {
@@ -88,10 +90,13 @@ case "Finish Team":
         } else {
         console.log("No employees");
         }
+
         break;
     default:
         break;
+        
         }
     })
 }
 
+getInfo();
