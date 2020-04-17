@@ -79,4 +79,19 @@ const createTeam = () => {
                     }
                 
             }) 
-    
+    break;
+case "Finish Team":
+        console.log(team);
+        if (team.length > 0) {
+        console.log("Complete");
+        writeHTML(render(team));
+        } else {
+        console.log("No employees");
+        }
+        break;
+    default:
+        break;
+        }
+    })
+}
+
