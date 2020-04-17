@@ -57,4 +57,26 @@ const createTeam = () => {
         }
     ])
 
+    .then((response) => {
+        const buildTeam = response.newTeam;
+        switch (buildTeam) {
+            case "Build Tteam":
+                inquirer
+                .prompt(questions)
+                .then((choices) => {
+                    if(choices === "Intern") {
+                        inquirer
+                        .prompt ( {
+                            type: "input",
+                            name: "school",
+                            message: "Where did you go to school?"
+                        })
+                        .then((ans) => {
+                            let intern = new Intern(
+                                choices.name, choices.id, choices.email, ans.school);
+                            team.push(intern);
+                        });
+                    }
+                
+            }) 
     
